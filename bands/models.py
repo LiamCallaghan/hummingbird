@@ -18,4 +18,4 @@ class Band(models.Model):
     # location = PlainLocationField(based_fields=['city'], zoom=7)
 
     def __str__(self):
-        return f'{self.name} - {self.size}'
+        return f'{self.id} - {self.name}'
