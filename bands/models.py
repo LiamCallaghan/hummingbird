@@ -16,6 +16,11 @@ class Band(models.Model):
     size = models.PositiveIntegerField(validators=[MinValueValidator(2)], default= 2)
     # city = models.CharField(max_length=255)
     # location = PlainLocationField(based_fields=['city'], zoom=7)
+    owner = models.ForeignKey(
+        'jwt_auth.User',
+        related_name='created_band',
+        on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f'{self.id} - {self.name}'

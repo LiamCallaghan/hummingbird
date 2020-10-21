@@ -3,13 +3,13 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import PermissionDenied
-# from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 
 from .serializers.common import UserSerializer
-
+from .serializers.populated import PopulatedUserSerializer
 User = get_user_model()
 
 class RegisterView(APIView):
@@ -47,3 +47,19 @@ class LoginView(APIView):
         return Response(
             {'token': token, 'message': f'Welcome Back {user_to_login.username}'}
         )
+
+class ProfileView(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def get(self, request):
+        user = User.objects.get(pk=request.user.id)
+        serialized_user = PopulatedUserSerializer(user)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+class UserListView(APIView):
+
+    def get(self, _request):
+        user_list = User.objects.all()
+        serialized_user_list = PopulatedUserSerializer(user_list, many=True)
+        return Response(serialized_user_list.data, status=status.HTTP_200_OK)
