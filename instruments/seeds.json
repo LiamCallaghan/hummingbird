@@ -1,0 +1,177 @@
+[
+{
+  "model": "instruments.instrument",
+  "pk": 1,
+  "fields": {
+    "name": "Drum Kit"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 2,
+  "fields": {
+    "name": "Lead Guitar"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 3,
+  "fields": {
+    "name": "Rhythm Guitar"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 4,
+  "fields": {
+    "name": "Bass Guitar"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 5,
+  "fields": {
+    "name": "Acoustic Guitar"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 6,
+  "fields": {
+    "name": "Vocals"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 7,
+  "fields": {
+    "name": "Ukulele"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 8,
+  "fields": {
+    "name": "Harp"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 9,
+  "fields": {
+    "name": "Banjo"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 10,
+  "fields": {
+    "name": "Accordion"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 11,
+  "fields": {
+    "name": "Piano"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 12,
+  "fields": {
+    "name": "Keyboard"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 13,
+  "fields": {
+    "name": "Saxophone"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 14,
+  "fields": {
+    "name": "Trumpet"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 15,
+  "fields": {
+    "name": "Clarinet"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 16,
+  "fields": {
+    "name": "Flute"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 17,
+  "fields": {
+    "name": "Bagpipe"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 18,
+  "fields": {
+    "name": "Trombone"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 19,
+  "fields": {
+    "name": "Harmonica"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 20,
+  "fields": {
+    "name": "Oboe"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 21,
+  "fields": {
+    "name": "Cello"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 22,
+  "fields": {
+    "name": "Violin"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 23,
+  "fields": {
+    "name": "Double Bass"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 24,
+  "fields": {
+    "name": "Synth"
+  }
+},
+{
+  "model": "instruments.instrument",
+  "pk": 25,
+  "fields": {
+    "name": "Drum Machine"
+  }
+}
+]

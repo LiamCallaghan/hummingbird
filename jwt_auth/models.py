@@ -39,8 +39,11 @@ skill_choices = (
 class User(AbstractUser):
     email = models.CharField(max_length=50, unique=True)
     first_name = models.CharField(max_length=50, blank=True)
-    # instrument = models.CharField(max_length=20, choices=instrument_choices)
     skill_level = models.CharField(max_length=12, choices=skill_choices, default='1', blank=True)
     profile_image = models.CharField(max_length=300, blank=True)
+    instrument = models.ManyToManyField(
+        'instruments.Instrument',
+        related_name='user'
+    )
     # city = models.CharField(max_length=255)
     # location = PlainLocationField(based_fields=['city'], zoom=7)

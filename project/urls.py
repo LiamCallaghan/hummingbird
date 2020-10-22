@@ -20,5 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/bands/', include('bands.urls')),
     path('api/auth/', include('jwt_auth.urls')),
-    path('api/messages/', include('message.urls'))
+    path('api/messages/', include('message.urls')),
+    path('api/chat/', include('chat.urls')),
+    path('api/comments/', include('comments.urls')),
+    # path('api/instruments/', include('instruments.urls'))
 ]
