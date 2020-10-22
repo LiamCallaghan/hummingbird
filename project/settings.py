@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'jwt_auth',
     'bands',
+    'chat',
+    'message',
 ]
 
 MIDDLEWARE = [

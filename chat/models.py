@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class Chat(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
-    sender = models.ManyToManyField(
-        'jwt_auth.User',
-        related_name='sender'
+    related_band = models.ManyToManyField(
+        'bands.Band',
+        related_name='band'
     )
     recipient = models.ManyToManyField(
         'jwt_auth.User',
