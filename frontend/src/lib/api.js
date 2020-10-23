@@ -19,25 +19,25 @@ export const getSingleBand = bandId => {
 }
 
 export const createBand = bandFormData => {
-  return axios.post(`${baseUrl}/bands`, bandFormData, withHeaders())
+  return axios.post(`${baseUrl}/bands/`, bandFormData, withHeaders())
 }
 
 export const registerUser = formData => {
-  return axios.post(`${baseUrl}/register`, formData)
+  return axios.post(`${baseUrl}/auth/register/`, formData)
 }
 
 export const loginUser = formData => {
-  return axios.post(`${baseUrl}/login`, formData)
+  return axios.post(`${baseUrl}/auth/login/`, formData)
 }
 
 export const getAllProfiles = () => {
-  return axios.get(`${baseUrl}/users`)
+  return axios.get(`${baseUrl}/auth/users`)
 }
 
 export const getSingleProfile = profileId => {
-  return axios.get(`${baseUrl}/users/${profileId}`)
+  return axios.get(`${baseUrl}/auth/users/${profileId}`)
 }
 
 export const getUserProfile = () => {
-  return axios.get(`${baseUrl}/profile`, withHeaders())
+  return axios.get(`${baseUrl}/auth/profile`, withHeaders())
 }
