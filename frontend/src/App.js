@@ -1,12 +1,17 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import Navbar from './components/common/Navbar'
+import Info from './components/common/Info'
+
 import BandIndex from './components/projects/BandIndex'
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Switch>
+        <Route exact path='/' component={Info}/>
         <Route path='/bands' component={BandIndex}/>
       </Switch>
     </BrowserRouter>
