@@ -33,6 +33,7 @@ class Register extends React.Component {
   }
 
   render() {
+    // eslint-disable-next-line camelcase
     const { username, email, password, password_confirmation } = this.state.formData
     return (
       <section className="section">
@@ -87,6 +88,7 @@ class Register extends React.Component {
                     // className={`input ${this.state.errors.passwordConfirmation ? 'is-danger' : ''}`}
                     placeholder="Password Confirmation"
                     name="password_confirmation"
+                    // eslint-disable-next-line camelcase
                     value={password_confirmation}
                     onChange={this.handleChange}
                   />

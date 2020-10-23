@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-import { getSingleProfile } from '../../lib/api'
+import { getUserProfile } from '../../lib/api'
 
 class ProfileShow extends React.Component {
   state = {
@@ -8,8 +8,9 @@ class ProfileShow extends React.Component {
   }
 
   componentDidMount = async () => {
-    const response = await getSingleProfile(this.props.match.params.id)
+    const response = await getUserProfile()
     this.setState({ profile: response.data })
+    console.log(response.data)
   }
 
   render() {

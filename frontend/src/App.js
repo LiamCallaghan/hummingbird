@@ -6,6 +6,7 @@ import Info from './components/common/Info'
 
 import Register from './components/user/Register'
 import Login from './components/user/Login'
+import ProfilePage from './components/user/ProfilePage'
 
 import BandIndex from './components/projects/BandIndex'
 
@@ -15,6 +16,7 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path='/' component={Info}/>
+        <Route path='/profile' component={ProfilePage} />
         <Route path='/bands' component={BandIndex}/>
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />

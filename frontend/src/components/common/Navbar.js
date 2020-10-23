@@ -26,11 +26,13 @@ class Navbar extends React.Component {
           <Link to='/bands' >Bands</Link>
         </div>
         <div>
-          <Link to='/register' >Register</Link>
+          { !isAuthenticated() && <Link to='/register' >Register</Link>}
         </div>
         <div>
-          <Link to='/login' >Login</Link>
-          {/* <Link to='/users/' >Profile</Link> */}
+          { !isAuthenticated() && <Link to='/login' >Login</Link>}
+        </div>
+        <div>
+          { isAuthenticated() && <Link to='/profile' >Profile</Link>}
         </div>
         <div>
           { isAuthenticated() && <Link to='/' onClick={this.handleLogout}>Log out</Link>}

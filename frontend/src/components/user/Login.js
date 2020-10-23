@@ -23,7 +23,7 @@ class Login extends React.Component {
     event.preventDefault()
     const response = await loginUser(this.state.formData)
     setToken(response.data.token)
-    this.props.history.push('/bands')
+    this.props.history.push('/profile')
   }
 
   render() {
