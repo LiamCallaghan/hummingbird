@@ -8,7 +8,7 @@ class Register extends React.Component {
       username: '',
       email: '',
       password: '',
-      passwordConfirmation: ''
+      password_confirmation: ''
     }
   }
 
@@ -33,7 +33,7 @@ class Register extends React.Component {
   }
 
   render() {
-    const { username, email, password, passwordConfirmation } = this.state.formData
+    const { username, email, password, password_confirmation } = this.state.formData
     return (
       <section className="section">
         <div className="container">
@@ -86,8 +86,8 @@ class Register extends React.Component {
                     type="password"
                     // className={`input ${this.state.errors.passwordConfirmation ? 'is-danger' : ''}`}
                     placeholder="Password Confirmation"
-                    name="passwordConfirmation"
-                    value={passwordConfirmation}
+                    name="password_confirmation"
+                    value={password_confirmation}
                     onChange={this.handleChange}
                   />
                 </div>

@@ -43,7 +43,8 @@ class User(AbstractUser):
     profile_image = models.CharField(max_length=300, blank=True)
     instrument = models.ManyToManyField(
         'instruments.Instrument',
-        related_name='user'
+        related_name='user',
+        blank=True
     )
     # city = models.CharField(max_length=255)
     # location = PlainLocationField(based_fields=['city'], zoom=7)

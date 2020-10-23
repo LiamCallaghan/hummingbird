@@ -17,7 +17,9 @@
     "profile_image": "",
     "groups": [],
     "user_permissions": [],
-    "instrument": []
+    "instrument": [
+      1
+    ]
   }
 },
 {
@@ -38,7 +40,9 @@
     "profile_image": "https://i.imgur.com/52cUg1i.png",
     "groups": [],
     "user_permissions": [],
-    "instrument": []
+    "instrument": [
+      3
+    ]
   }
 },
 {
