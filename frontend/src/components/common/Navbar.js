@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import { logout, isAuthenticated } from '../../lib/auth'
 
 class Navbar extends React.Component {
 
@@ -10,6 +11,10 @@ class Navbar extends React.Component {
   // componentDidMount = async () => {
   //   const user
   // }
+
+  handleLogout = () => {
+    logout()
+  }
 
   render() {
     return (
@@ -26,6 +31,9 @@ class Navbar extends React.Component {
         <div>
           <Link to='/login' >Login</Link>
           {/* <Link to='/users/' >Profile</Link> */}
+        </div>
+        <div>
+          { isAuthenticated() && <Link to='/' onClick={this.handleLogout}>Log out</Link>}
         </div>
       </nav>
     )
