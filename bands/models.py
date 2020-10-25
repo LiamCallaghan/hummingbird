@@ -10,11 +10,6 @@ goal_choices = (
 # Create your models here.
 class Band(models.Model):
     name = models.CharField(max_length=50)
-    genre = models.ManyToManyField(
-        'genres.Genre',
-        related_name='band',
-        blank=True
-    )
     description = models.TextField()
     goals = models.CharField(max_length=12, choices=goal_choices, default= '1')
     size = models.PositiveIntegerField(validators=[MinValueValidator(2)], default= 2)
@@ -24,6 +19,11 @@ class Band(models.Model):
         'jwt_auth.User',
         related_name='created_band',
         on_delete=models.CASCADE
+    )
+    genre = models.ManyToManyField(
+        'genres.Genre',
+        related_name='band',
+        blank=True
     )
 
     def __str__(self):
