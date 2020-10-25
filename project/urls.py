@@ -23,5 +23,6 @@ urlpatterns = [
     path('api/messages/', include('message.urls')),
     path('api/chat/', include('chat.urls')),
     path('api/comments/', include('comments.urls')),
-    # path('api/instruments/', include('instruments.urls'))
+    path('api/instruments/', include('instruments.urls')),
+    path('api/genres/', include('genres.urls')),
 ]

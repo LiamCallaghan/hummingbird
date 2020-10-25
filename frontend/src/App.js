@@ -10,6 +10,7 @@ import ProfilePage from './components/user/ProfilePage'
 
 import BandIndex from './components/projects/BandIndex'
 import BandPage from './components/projects/BandPage'
+import BandForm from './components/projects/BandForm'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Info}/>
         <Route path='/profile' component={ProfilePage} />
+        <Route path='/bands/form' component={BandForm}/>
         <Route path='/bands/:id' component={BandPage}/>
         <Route path='/bands' component={BandIndex}/>
         <Route path='/register' component={Register} />
@@ -26,20 +28,5 @@ const App = () => {
     </BrowserRouter>
   )
 }
-// class App extends React.Component {
-//   async componentDidMount() {
-//     try {
-//       const response = await fetch('/api/bands')
-//       const data = await response.json()
-//       console.log(data)
-//     } catch (err) {
-//       console.log(err)
-//     }
-//   }
-
-//   render() {
-//     return null
-//   }
-// }
 
 export default App

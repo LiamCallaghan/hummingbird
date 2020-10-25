@@ -41,3 +41,11 @@ export const getSingleProfile = profileId => {
 export const getUserProfile = () => {
   return axios.get(`${baseUrl}/auth/profile`, withHeaders())
 }
+
+export const getGenreList = () => {
+  return axios.get(`${baseUrl}/genres`)
+}
+
+export const getInstrumentList = () => {
+  return axios.get(`${baseUrl}/instruments`)
+}
