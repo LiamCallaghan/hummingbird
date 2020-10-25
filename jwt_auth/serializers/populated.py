@@ -11,4 +11,4 @@ class PopulatedUserSerializer(UserSerializer):
     created_band = BandSerializer(many=True)
     instrument = InstrumentSerializer(many=True)
     # comments = PopulatedCommentSerializer(many=True)
-    sent_chats = ChatSerializer
+    sent_chats = ChatSerializer(many=True)

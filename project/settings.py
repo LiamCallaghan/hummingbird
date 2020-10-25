@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'message',
     'comments',
     'instruments',
+    'genres',
 ]
 
 MIDDLEWARE = [

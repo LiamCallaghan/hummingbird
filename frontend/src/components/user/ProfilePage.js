@@ -14,9 +14,10 @@ class ProfileShow extends React.Component {
   }
 
   render() {
-    if (!this.state.profile) return null
+    const { profile } = this.state
+    if (!profile) return null
     return (
-      <div>{this.state.profile.username}</div>
+      <div>{profile.username}</div>
     )
   }
 }

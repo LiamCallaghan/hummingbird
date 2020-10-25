@@ -9,6 +9,7 @@ import Login from './components/user/Login'
 import ProfilePage from './components/user/ProfilePage'
 
 import BandIndex from './components/projects/BandIndex'
+import BandPage from './components/projects/BandPage'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Info}/>
         <Route path='/profile' component={ProfilePage} />
+        <Route path='/bands/:id' component={BandPage}/>
         <Route path='/bands' component={BandIndex}/>
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />

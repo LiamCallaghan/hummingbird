@@ -5,4 +5,4 @@ from ..serializers.common import BandSerializer
 
 class PopulatedBandSerializer(BandSerializer):
     owner = NestedUserSerializer()
-    chats = ChatSerializer
+    chats = ChatSerializer(many=True)
