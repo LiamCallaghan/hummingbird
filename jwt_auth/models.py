@@ -30,9 +30,9 @@ from django.contrib.auth.models import AbstractUser
 # )
 
 skill_choices = (
-    ('1', 'Beginner'),
-    ('2', 'Intermediate'),
-    ('3', 'Expert')
+    ('Beginner', 'Beginner'),
+    ('Intermediate', 'Intermediate'),
+    ('Expert', 'Expert')
 )
 
 # Create your models here.

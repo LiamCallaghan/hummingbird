@@ -2,15 +2,19 @@ from django.db import models
 from django.core.validators import MinValueValidator
 
 goal_choices = (
-    ('1', 'Make music'),
-    ('2', 'Make money'),
-    ('3', 'Make friends')
+    ('Make music', 'Make music'),
+    ('Make money', 'Make money'),
+    ('Make friends', 'Make friends')
 )
 
 # Create your models here.
 class Band(models.Model):
     name = models.CharField(max_length=50)
-    # genre = models.CharField(max_length=50, many=True)
+    genre = models.ManyToManyField(
+        'genres.Genre',
+        related_name='band',
+        blank=True
+    )
     description = models.TextField()
     goals = models.CharField(max_length=12, choices=goal_choices, default= '1')
     size = models.PositiveIntegerField(validators=[MinValueValidator(2)], default= 2)

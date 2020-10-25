@@ -5,7 +5,7 @@
   "fields": {
     "name": "Hen and the crew",
     "description": "Just a small town chicken looking to start a riot, bass guitar and drums need not apply.",
-    "goals": "1",
+    "goals": "Make music",
     "size": 12,
     "owner": 2
   }
@@ -16,7 +16,7 @@
   "fields": {
     "name": "Corpse hunters",
     "description": "Sweet melodical riffs on my banjo, whatever you can bring to the table. cant wait to meet you.",
-    "goals": "3",
+    "goals": "Make friends",
     "size": 2,
     "owner": 2
   }
@@ -27,7 +27,7 @@
   "fields": {
     "name": "Full deck, no jokers",
     "description": "we shall be the greatest slam dunk pop punk band to ever ever, ever",
-    "goals": "2",
+    "goals": "Make money",
     "size": 4,
     "owner": 2
   }
@@ -38,7 +38,7 @@
   "fields": {
     "name": "Skimbly Pimbles",
     "description": "Just regular old school blues",
-    "goals": "1",
+    "goals": "Make music",
     "size": 6,
     "owner": 3
   }
@@ -49,7 +49,7 @@
   "fields": {
     "name": "Jam Packed Mary",
     "description": "Middle aged riot women, there for the first wave. Ready to come crashing back into Riot girl/Wedding scene. Thats right, we play weddings.",
-    "goals": "2",
+    "goals": "Make money",
     "size": 5,
     "owner": 4
   }
@@ -60,7 +60,7 @@
   "fields": {
     "name": "Son of Slakoth",
     "description": "Vocalist with lyrics to spare looking for a multi instrumentalist to back me up as i break the slam poetry scene apart at the seams",
-    "goals": "1",
+    "goals": "Make music",
     "size": 2,
     "owner": 3
   }
@@ -71,7 +71,7 @@
   "fields": {
     "name": "The Jive Chives Experience",
     "description": "Thirteen bands into the music industry, trying to make it fourteen. Incredibly loyal jazz flute player looking for my forever band.",
-    "goals": "3",
+    "goals": "Make friends",
     "size": 10,
     "owner": 3
   }
@@ -82,7 +82,7 @@
   "fields": {
     "name": "Nagual del Judith",
     "description": "Come with us if you want to live.",
-    "goals": "1",
+    "goals": "Make music",
     "size": 4,
     "owner": 4
   }
@@ -93,7 +93,7 @@
   "fields": {
     "name": "Darth Cab for Cutie",
     "description": "Star Wars themed Death Cab for Cutie tribute band.",
-    "goals": "2",
+    "goals": "Make money",
     "size": 4,
     "owner": 4
   }
@@ -104,7 +104,7 @@
   "fields": {
     "name": "Chimp Monk",
     "description": "Indie shoegaze alternative blues style looking to play nightclubs where we cant be heard and abandoned alleys. HMU",
-    "goals": "1",
+    "goals": "Make music",
     "size": 4,
     "owner": 3
   }

@@ -1,0 +1,142 @@
+[
+{
+  "model": "genres.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Rock"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Metal"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Blues"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Country"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Comedy"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Electronica"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Rap"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Pop"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 9,
+  "fields": {
+    "name": "R&B"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Jazz"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Punk"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 12,
+  "fields": {
+    "name": "Ska"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Folk"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Alternative"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 15,
+  "fields": {
+    "name": "Cover"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 16,
+  "fields": {
+    "name": "Shoegaze"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 17,
+  "fields": {
+    "name": "Noise"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 18,
+  "fields": {
+    "name": "House"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 19,
+  "fields": {
+    "name": "Funk"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 20,
+  "fields": {
+    "name": "Soul"
+  }
+}
+]
