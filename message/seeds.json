@@ -1,0 +1,68 @@
+[
+{
+  "model": "message.message",
+  "pk": 1,
+  "fields": {
+    "text": "Can i join your band",
+    "created_at": "2020-10-25T12:50:19.141Z",
+    "sent_by": 3,
+    "related_to": 2,
+    "status": "Unread"
+  }
+},
+{
+  "model": "message.message",
+  "pk": 2,
+  "fields": {
+    "text": "Can i join your band",
+    "created_at": "2020-10-25T12:50:37.081Z",
+    "sent_by": 4,
+    "related_to": 3,
+    "status": "Unread"
+  }
+},
+{
+  "model": "message.message",
+  "pk": 3,
+  "fields": {
+    "text": "no",
+    "created_at": "2020-10-25T12:51:00.277Z",
+    "sent_by": 3,
+    "related_to": 2,
+    "status": "Unread"
+  }
+},
+{
+  "model": "message.message",
+  "pk": 4,
+  "fields": {
+    "text": "Can i join your band",
+    "created_at": "2020-10-25T12:51:31.316Z",
+    "sent_by": 2,
+    "related_to": 1,
+    "status": "Unread"
+  }
+},
+{
+  "model": "message.message",
+  "pk": 5,
+  "fields": {
+    "text": "Can i join your band",
+    "created_at": "2020-10-25T12:51:45.809Z",
+    "sent_by": 3,
+    "related_to": 3,
+    "status": "Unread"
+  }
+},
+{
+  "model": "message.message",
+  "pk": 6,
+  "fields": {
+    "text": "Can i join your band",
+    "created_at": "2020-10-25T12:51:55.860Z",
+    "sent_by": 4,
+    "related_to": 4,
+    "status": "Unread"
+  }
+}
+]

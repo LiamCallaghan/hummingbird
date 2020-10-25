@@ -1,0 +1,42 @@
+[
+{
+  "model": "chat.chat",
+  "pk": 1,
+  "fields": {
+    "created_at": "2020-10-25T12:49:07.857Z",
+    "related_band": 4,
+    "sender": 1,
+    "status": "empty"
+  }
+},
+{
+  "model": "chat.chat",
+  "pk": 2,
+  "fields": {
+    "created_at": "2020-10-25T12:49:15.769Z",
+    "related_band": 2,
+    "sender": 2,
+    "status": "empty"
+  }
+},
+{
+  "model": "chat.chat",
+  "pk": 3,
+  "fields": {
+    "created_at": "2020-10-25T12:49:23.006Z",
+    "related_band": 2,
+    "sender": 2,
+    "status": "empty"
+  }
+},
+{
+  "model": "chat.chat",
+  "pk": 4,
+  "fields": {
+    "created_at": "2020-10-25T12:49:32.248Z",
+    "related_band": 9,
+    "sender": 4,
+    "status": "empty"
+  }
+}
+]
