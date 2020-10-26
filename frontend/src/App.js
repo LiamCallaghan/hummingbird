@@ -12,6 +12,8 @@ import BandIndex from './components/projects/BandIndex'
 import BandPage from './components/projects/BandPage'
 import BandNew from './components/projects/BandNew'
 
+import ChatPage from './components/interaction/ChatPage'
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,6 +26,7 @@ const App = () => {
         <Route path='/bandslist' component={BandIndex}/>
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
+        <Route path='/chat' component={ChatPage} />
       </Switch>
     </BrowserRouter>
   )

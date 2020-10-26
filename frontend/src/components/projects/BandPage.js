@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { getSingleBand } from '../../lib/api'
 
@@ -24,7 +25,7 @@ class BandPage extends React.Component {
         <div>{band.name}</div>
         <div>{band.description}</div>
         <div>{band.owner.username}</div>
-        <div>Chats : {band.chats.length}</div>
+        <Link to={'/chat'}><div>Chats : {band.chats.length}</div></Link>
       </>
     )
   }

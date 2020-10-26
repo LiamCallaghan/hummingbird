@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
+# from rest_framework.permissions import IsAuthenticated
 
 from .serializers.common import MessageSerializer
 from .serializers.populated import PopulatedMessageSerializer
@@ -10,7 +10,7 @@ from .models import Message
 
 class MessageListView(APIView):
 
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )
 
     def get(self, _request):
         message_list = Message.objects.all()
@@ -27,7 +27,7 @@ class MessageListView(APIView):
 
 class MessageDetailView(APIView):
 
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )
 
     def get_message(self, pk):
         try:
