@@ -4,18 +4,20 @@ import { createBand, getGenreList } from '../../lib/api'
 class BandForm extends React.Component {
   // const { name, description, }
   state = {
-    // formData: {
-    //   name: '',
-    //   description: '',
-    //   goals: '',
-    //   size: null,
-    genres: []
-    // }
+    genreChoices: [],
+    formData: {
+      name: '',
+      description: '',
+      goals: '',
+      size: 2,
+      genres: []
+    }
   }
 
   componentDidMount = async () => {
     const response = await getGenreList()
     this.setState({
+      genreChoices: response.data,
       genres: response.data
     })
     console.log(response.data)
@@ -36,13 +38,39 @@ class BandForm extends React.Component {
   }
 
   render() {
-    const { genres } = this.state
-    if (!genres) return null
+    const { name, description, size, genres  } = this.state.formData
+    const { handleChange, handleSubmit } = this
+    if (!this.state.genreChoices) return null
     return (
       <>
-        {genres.map(genre => (
-          <div key={genre.id}>{genre.name}</div>
-        ))}
+        <input
+          placeholder='Band name'
+          name='name'
+          value={name}
+          onChange={handleChange}
+        />
+        <textarea 
+          placeholder='Description'
+          name='description'
+          value={description}
+          onChange={handleChange}
+        />
+        <select name='goals'>
+          <option>Make music</option>
+          <option>Make money</option>
+          <option>Make friends</option>
+        </select>
+        <input type='number'
+          name='size'
+          value={size}
+          onChange={handleChange}
+        />
+        <select name='genres'>
+          {genres.map(genre => {
+            return <option key={genre.id}>{genre.name}</option>
+          })}
+        </select>
+        <button type='submit' onClick={handleSubmit}>Submit</button>
       </>
     )
   }

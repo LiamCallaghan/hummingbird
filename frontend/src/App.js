@@ -19,7 +19,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Info}/>
         <Route path='/profile' component={ProfilePage} />
-        <Route path='/bands/form' component={BandForm}/>
+        <Route exact path='/bands/' component={BandForm}/>
         <Route path='/bands/:id' component={BandPage}/>
         <Route path='/bands' component={BandIndex}/>
         <Route path='/register' component={Register} />
