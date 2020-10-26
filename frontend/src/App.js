@@ -10,7 +10,7 @@ import ProfilePage from './components/user/ProfilePage'
 
 import BandIndex from './components/projects/BandIndex'
 import BandPage from './components/projects/BandPage'
-import BandForm from './components/projects/BandForm'
+import BandNew from './components/projects/BandNew'
 
 const App = () => {
   return (
@@ -19,9 +19,9 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Info}/>
         <Route path='/profile' component={ProfilePage} />
-        <Route exact path='/bands/' component={BandForm}/>
+        <Route exact path='/bands/' component={BandNew}/>
         <Route path='/bands/:id' component={BandPage}/>
-        <Route path='/bands' component={BandIndex}/>
+        <Route path='/bandslist' component={BandIndex}/>
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
       </Switch>

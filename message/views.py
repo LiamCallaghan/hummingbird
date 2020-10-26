@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 
 from .serializers.common import MessageSerializer
+from .serializers.populated import PopulatedMessageSerializer
 from .models import Message
 
 class MessageListView(APIView):
@@ -13,7 +14,7 @@ class MessageListView(APIView):
 
     def get(self, _request):
         message_list = Message.objects.all()
-        serialized_message_list = MessageSerializer(message_list, many=True)
+        serialized_message_list = PopulatedMessageSerializer(message_list, many=True)
         return Response(serialized_message_list.data, status=status.HTTP_200_OK)
 
     def post(self, request):
@@ -36,5 +37,5 @@ class MessageDetailView(APIView):
 
     def get(self, _request, pk):
         message = self.get_message(pk=pk)
-        serialized_message = MessageSerializer(message)
+        serialized_message = PopulatedMessageSerializer(message)
         return Response(serialized_message.data, status=status.HTTP_200_OK)

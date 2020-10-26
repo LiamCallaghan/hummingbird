@@ -49,3 +49,11 @@ export const getGenreList = () => {
 export const getInstrumentList = () => {
   return axios.get(`${baseUrl}/instruments`)
 }
+
+export const startChat = (chatFormData, bandId) => {
+  return axios.post(`${baseUrl}/bands/${bandId}/chats`, chatFormData, withHeaders())
+}
+
+export const createMessage = (messageFormData, chatId) => {
+  return axios.post(`${baseUrl}/chat/${chatId}`, messageFormData, withHeaders())
+}

@@ -23,6 +23,8 @@ class BandPage extends React.Component {
       <>
         <div>{band.name}</div>
         <div>{band.description}</div>
+        <div>{band.owner.username}</div>
+        <div>Chats : {band.chats.length}</div>
       </>
     )
   }

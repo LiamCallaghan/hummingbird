@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 
 from .serializers.common import ChatSerializer
+from .serializers.populated import PopulatedChatSerializer
 from .models import Chat
 
 class ChatListView(APIView):
@@ -21,7 +22,7 @@ class ChatListView(APIView):
 
     def get(self, _request):
         chat_list = Chat.objects.all()
-        serialized_chat_list = ChatSerializer(chat_list, many=True)
+        serialized_chat_list = PopulatedChatSerializer(chat_list, many=True)
         return Response(serialized_chat_list.data, status=status.HTTP_200_OK)
 
 class ChatDetailView(APIView):
@@ -33,6 +34,11 @@ class ChatDetailView(APIView):
             return Chat.objects.get(pk=pk)
         except Chat.DoesNotExist:
             raise NotFound()
+
+    def get(self, _request, pk):
+        chat = self.get_chat(pk=pk)
+        serialized_chat = PopulatedChatSerializer(chat)
+        return Response(serialized_chat.data, status=status.HTTP_200_OK)
 
     def delete(self, _request, pk):
         chat_to_delete = self.get_chat(pk=pk)
