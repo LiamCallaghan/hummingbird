@@ -22,6 +22,14 @@ export const createBand = bandFormData => {
   return axios.post(`${baseUrl}/bands/`, bandFormData, withHeaders())
 }
 
+export const updateBand = (bandId, bandFormData) => {
+  return axios.put(`${baseUrl}/bands/${bandId}`, bandFormData, withHeaders())
+}
+
+export const deleteBand = bandId => {
+  return axios.delete(`${baseUrl}/bands/${bandId}`, withHeaders())
+}
+
 export const registerUser = formData => {
   return axios.post(`${baseUrl}/auth/register/`, formData)
 }
@@ -40,6 +48,10 @@ export const getSingleProfile = profileId => {
 
 export const getUserProfile = () => {
   return axios.get(`${baseUrl}/auth/profile`, withHeaders())
+}
+
+export const updateUserProfile = formData => {
+  return axios.put(`${baseUrl}/auth/profile/`, formData, withHeaders())
 }
 
 export const getGenreList = () => {

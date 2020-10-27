@@ -96,7 +96,7 @@ class Register extends React.Component {
                 {/* { this.state.errors.passwordConfirmation && <p className='help is-danger'>{ this.state.errors.passwordConfirmation }</p> } */}
               </div>
               <div className="field">
-                <button type="submit" className="button is-fullwidth is-warning">Register</button>
+                <button type="submit" className="button is-fullwidth is-purple">Register</button>
               </div>
             </form>
           </div>

@@ -25,7 +25,7 @@ class BandPage extends React.Component {
     event.preventDefault()
     const response = await startChat(this.state.formData)
     console.log(response)
-    this.props.history.push('/profile')
+    this.props.history.push(`/chat/${response.data.id}`)
   }
 
   render() {
@@ -37,6 +37,7 @@ class BandPage extends React.Component {
         <div>{band.description}</div>
         <div>{band.owner.username}</div>
         <Link to={'/chat'}><div>Chats : {band.chats.length}</div></Link>
+        <button type='submit' className='button' onClick={this.handleSubmit}>Start a chat</button>
       </>
     )
   }

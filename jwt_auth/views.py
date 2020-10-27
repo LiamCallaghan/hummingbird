@@ -57,6 +57,14 @@ class ProfileView(APIView):
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
 
+    def put(self, request):
+        user = User.objects.get(pk=request.user.id)
+        updated_user = UserSerializer(user, data=request.data)
+        if updated_user.is_valid():
+            updated_user.save()
+            return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
+        return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
 class UserListView(APIView):
 
     def get(self, _request):

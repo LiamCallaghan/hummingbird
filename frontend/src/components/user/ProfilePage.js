@@ -17,7 +17,30 @@ class ProfileShow extends React.Component {
     const { profile } = this.state
     if (!profile) return null
     return (
-      <div>{profile.username}</div>
+      <div className='section'>
+        <div className='container'>
+          <div className="columns">
+            <div className="column is-three-fifths border">
+              <div className='columns'>
+                <div className='column'>
+                  <img src={profile.profile_image} alt='profile' width="255" height="255"/><br/>
+                </div>
+                <div className='column'>
+                  username - {profile.username}<br/>
+                  email - {profile.email}<br/>
+                  date joined - {profile.date_joined.slice(0, 10)}<br/>
+                  skill level - {profile.skill_level}<br/>
+                  <button>Edit profile</button>
+                </div>
+              </div>
+            </div>
+            <div className="column is-multiline">
+              <div className='container border'>Created bands - {profile.created_band.length}</div>
+              <div className='container border'>Chats - {profile.sent_chats.length}</div>
+            </div>
+          </div>
+        </div>
+      </div>
     )
   }
 }
