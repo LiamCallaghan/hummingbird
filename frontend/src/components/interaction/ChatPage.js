@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { getChatList } from '../../lib/api'
 
@@ -20,7 +21,7 @@ class ChatPage extends React.Component {
     return (
       <div>
         {this.state.chats.map((chat) => (
-          <div key={chat.id} >{chat.status}</div>
+          <Link to={`/chat/${chat.id}`} key={chat.id}><div>{chat.status}</div></Link>
         ))}
       </div>
     )

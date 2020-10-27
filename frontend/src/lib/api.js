@@ -50,12 +50,12 @@ export const getInstrumentList = () => {
   return axios.get(`${baseUrl}/instruments`)
 }
 
-export const startChat = (chatFormData, bandId) => {
-  return axios.post(`${baseUrl}/chat/`, chatFormData, bandId, withHeaders())
+export const startChat = (chatFormData) => {
+  return axios.post(`${baseUrl}/chat/`, chatFormData, withHeaders())
 }
 
-export const createMessage = (messageFormData, chatId) => {
-  return axios.post(`${baseUrl}/messages/`, messageFormData, chatId, withHeaders())
+export const createMessage = (messageFormData) => {
+  return axios.post(`${baseUrl}/messages/`, messageFormData, withHeaders())
 }
 
 export const getChatList = () => {
@@ -64,4 +64,8 @@ export const getChatList = () => {
 
 export const getMessageList = () => {
   return axios.get(`${baseUrl}/messages`, withHeaders())
+}
+
+export const getSingleChat = chatId => {
+  return axios.get(`${baseUrl}/chat/${chatId}`, withHeaders())
 }
