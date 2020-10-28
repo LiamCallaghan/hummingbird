@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import BandItem from './BandItem'
 import { getBandList } from '../../lib/api'
 
 class BandIndex extends React.Component {
@@ -17,13 +17,11 @@ class BandIndex extends React.Component {
     const { bands } = this.state
     if (!bands) return null
     return (
-      <>
+      <div className='section'>
         {bands.map((band) => (
-          <Link to={`/bands/${band.id}`} key={band.id}>
-            <div >{band.name}</div>
-          </Link>
+          <BandItem key={band.id} {...band} />
         ))}
-      </>
+      </div>
     )
   }
 }

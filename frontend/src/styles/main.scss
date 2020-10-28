@@ -58,3 +58,12 @@ $purple: #b82ea3;
 .log-info {
   text-align: center;
 }
+
+.styles {
+  display: none;
+}
+
+.style-hider:hover ~ .styles {
+  display: block;
+  color: grey;
+}

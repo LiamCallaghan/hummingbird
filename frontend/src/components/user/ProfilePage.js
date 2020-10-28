@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { getUserProfile } from '../../lib/api'
 
 class ProfileShow extends React.Component {
@@ -35,8 +35,13 @@ class ProfileShow extends React.Component {
               </div>
             </div>
             <div className="column is-multiline">
-              <div className='container border'>Created bands - {profile.created_band.length}</div>
-              <div className='container border'>Chats - {profile.sent_chats.length}</div>
+              <div className='container border'>
+                <div className='container'>Created bands - {profile.created_band.length}</div>
+                <Link to={'/bands/'}><button>Create a new band!</button></Link>
+              </div>
+              <div className='container'>
+                <div className='container border'>Chats - {profile.sent_chats.length}</div>
+              </div>
             </div>
           </div>
         </div>

@@ -6,25 +6,23 @@ import { getSingleBand, startChat } from '../../lib/api'
 class BandPage extends React.Component {
   state = {
     band: null,
-    formData: {
-      related_band: ''
-    }
+    related_band: null
   }
 
   async componentDidMount() {
     const bandId = this.props.match.params.id
     const response = await getSingleBand(bandId)
     this.setState({
-      band: response.data,
-      related_band: bandId
+      related_band: response.data.id,
+      band: response.data
     })
-    console.log(response.data)
+    console.log(response.data.id)
   }
 
   handleSubmit= async event => {
+    console.log(this.state.related_band)
     event.preventDefault()
-    const response = await startChat(this.state.formData)
-    console.log(response)
+    const response = await startChat(this.state.related_band)
     this.props.history.push(`/chat/${response.data.id}`)
   }
 

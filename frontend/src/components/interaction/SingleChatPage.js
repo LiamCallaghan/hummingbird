@@ -7,7 +7,7 @@ class SingleChatPage extends React.Component {
     chat: null,
     formData: {
       text: '',
-      related_to: ''
+      related_to: null
     }
   }
 
@@ -16,7 +16,7 @@ class SingleChatPage extends React.Component {
     const response = await getSingleChat(chatId)
     this.setState({
       chat: response.data,
-      related_to: chatId
+      related_to: response.data.id
     })
     console.log(response.data)
   }

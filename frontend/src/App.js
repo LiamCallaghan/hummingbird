@@ -14,7 +14,7 @@ import BandNew from './components/projects/BandNew'
 
 import ChatPage from './components/interaction/ChatPage'
 import SingleChatPage from './components/interaction/SingleChatPage'
-import MessagePage from './components/interaction/MessagePage'
+// import MessagePage from './components/interaction/MessagePage'
 
 const App = () => {
   return (
@@ -30,7 +30,7 @@ const App = () => {
         <Route path='/login' component={Login} />
         <Route path='/chat/:id' component={SingleChatPage} />
         <Route path='/chat' component={ChatPage} />
-        <Route path='/message' component={MessagePage} />
+        {/* <Route path='/message' component={MessagePage} /> */}
       </Switch>
     </BrowserRouter>
   )
