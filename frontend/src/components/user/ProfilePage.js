@@ -30,7 +30,7 @@ class ProfileShow extends React.Component {
                   email - {profile.email}<br/>
                   date joined - {profile.date_joined.slice(0, 10)}<br/>
                   skill level - {profile.skill_level}<br/>
-                  <button>Edit profile</button>
+                  <Link to={'/profile/edit'}><button>Edit profile</button></Link>
                 </div>
               </div>
             </div>

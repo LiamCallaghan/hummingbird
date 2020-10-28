@@ -7,6 +7,7 @@ import Info from './components/common/Info'
 import Register from './components/user/Register'
 import Login from './components/user/Login'
 import ProfilePage from './components/user/ProfilePage'
+import EditUser from './components/user/EditUser'
 
 import BandIndex from './components/projects/BandIndex'
 import BandPage from './components/projects/BandPage'
@@ -22,6 +23,7 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path='/' component={Info}/>
+        <Route path='/profile/edit' component={EditUser} />
         <Route path='/profile' component={ProfilePage} />
         <Route exact path='/bands/' component={BandNew}/>
         <Route path='/bands/:id' component={BandPage}/>
