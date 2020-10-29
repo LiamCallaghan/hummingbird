@@ -48,8 +48,8 @@ class BandNew extends React.Component {
 
   handleSubmit = async event => {
     event.preventDefault()
+    console.log(this.state.formData)
     const response = await createBand(this.state.formData)
-    console.log(response.data)
     this.props.history.push(`/bands/${response.data.id}`)
   }
 

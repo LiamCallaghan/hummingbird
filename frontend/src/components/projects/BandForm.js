@@ -34,6 +34,7 @@ const BandForm = props => {
               <label className="label">Band goal</label>
               <div className="control">
                 <select name='goals' value={goals} onChange={handleChange}>
+                  <option value="" disabled></option>
                   <option>Make music</option>
                   <option>Make money</option>
                   <option>Make friends</option>
