@@ -88,7 +88,7 @@ const UserForm = props => {
           </div>
         </div>
         <div className="field">
-          <button type="submit" className="button is-fullwidth purple">Submit</button>
+          <button type="submit" className="is-fullwidth">Submit</button>
         </div>
       </form>
     </div>

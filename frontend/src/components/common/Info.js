@@ -21,7 +21,7 @@ class Info extends React.Component {
                 <Link to='/register'><button>Register now!</button></Link>
               </div>}
               { isAuthenticated() && <div className='log-info'>
-                <Link to='/bands'><h2 className='link-style'>Search for a band</h2></Link>
+                <Link to='/bandslist'><h2 className='link-style'>Search for a band</h2></Link>
                 <h2>or</h2>
                 <Link to='/bands/'><h2 className='link-style'>Start one yourself</h2></Link>
               </div>}
