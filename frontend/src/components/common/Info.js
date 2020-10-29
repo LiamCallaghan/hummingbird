@@ -15,12 +15,12 @@ class Info extends React.Component {
               </figure>
             </div>
             <div className="column is-half">
-              { !isAuthenticated() && <div className='gen-info'>
+              { !isAuthenticated() && <div className='section gen-info'>
                 <h2>Looking to start a band or join one?</h2>
                 <p>Whatever your skill level or prefered style, there is a place for you here!</p>
-                <Link to='/register'><button>Register now!</button></Link>
+                <Link to='/register'><button className='is-fullwidth'>Register now!</button></Link>
               </div>}
-              { isAuthenticated() && <div className='log-info'>
+              { isAuthenticated() && <div className='section log-info'>
                 <Link to='/bandslist'><h2 className='link-style'>Search for a band</h2></Link>
                 <h2>or</h2>
                 <Link to='/bands/'><h2 className='link-style'>Start one yourself</h2></Link>
