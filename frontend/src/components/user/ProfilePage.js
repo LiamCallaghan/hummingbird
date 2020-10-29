@@ -30,17 +30,28 @@ class ProfileShow extends React.Component {
                   email - {profile.email}<br/>
                   date joined - {profile.date_joined.slice(0, 10)}<br/>
                   skill level - {profile.skill_level}<br/>
+                  {<span className='style-hider'>Hover to show instruments</span>} - {profile.instrument.map(instrument => <span key={instrument.id} className='styles'>{instrument.name + '.'}</span>)}
                   <Link to={'/profile/edit'}><button>Edit profile</button></Link>
                 </div>
               </div>
             </div>
             <div className="column is-multiline">
               <div className='container border'>
-                <div className='container'>Created bands - {profile.created_band.length}</div>
+                <h2>Created bands - </h2>
+                <div>
+                  {profile.created_band.map((band) => (
+                    <Link to={`/bands/${band.id}`} key={band.id}><div className='link-style'>{band.name}</div></Link>
+                  ))}
+                </div>
                 <Link to={'/bands/'}><button>Create a new band!</button></Link>
               </div>
-              <div className='container'>
-                <div className='container border'>Chats - {profile.sent_chats.length}</div>
+              <div className='container border'>
+                <h2>Chats - </h2>
+                <div>
+                  {profile.sent_chats.map((chat) => (
+                    <Link to={`/chat/${chat.id}`} key={chat.id}><div className='link-style'>{chat.related_band.name}</div></Link>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

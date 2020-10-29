@@ -1,16 +1,25 @@
-@charset 'utf-8';
-@import '~bulma/bulma.sass';
+// @charset 'utf-8';
+// @import '~bulma/bulma.sass';
 
 $purple: #b82ea3;
 // $primary: $purple;
 
-* {
-  color: black;
-  font-size: 20px;
+// * {
+//   color: black;
+//   font-size: 20px;
+// }
+
+h2 {
+  font-size: 40px;
 }
 
-.button {
+p {
+  font-size: 25px;
+}
+
+button {
   background: $purple;
+  font-size: 20px;
 }
 
 .section {
@@ -66,4 +75,17 @@ $purple: #b82ea3;
 .style-hider:hover ~ .styles {
   display: block;
   color: grey;
+}
+
+.band-items {
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+
+.link-style {
+  color: $purple;
+}
+
+.chat {
+  font-size: 30px;
 }

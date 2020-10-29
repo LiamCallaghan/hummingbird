@@ -18,9 +18,11 @@ class BandIndex extends React.Component {
     if (!bands) return null
     return (
       <div className='section'>
-        {bands.map((band) => (
-          <BandItem key={band.id} {...band} />
-        ))}
+        <div className='container band-items border'>
+          {bands.map((band) => (
+            <BandItem key={band.id} {...band} />
+          ))}
+        </div>
       </div>
     )
   }

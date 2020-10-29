@@ -1,4 +1,6 @@
 import React from 'react'
+import { withRouter, Link } from 'react-router-dom'
+import { isAuthenticated } from '../../lib/auth'
 
 class Info extends React.Component {
 
@@ -13,16 +15,16 @@ class Info extends React.Component {
               </figure>
             </div>
             <div className="column is-half">
-              <div className='gen-info'>
-                <h3>Looking to start a band or join one?</h3>
+              { !isAuthenticated() && <div className='gen-info'>
+                <h2>Looking to start a band or join one?</h2>
                 <p>Whatever your skill level or prefered style, there is a place for you here!</p>
-                <h1>Sign in now!</h1>
-              </div>
-              <div className='log-info'>
-                <h1>Search for a band</h1>
-                <h1>or</h1>
-                <h1>Start one yourself</h1>
-              </div>
+                <Link to='/register'><button>Register now!</button></Link>
+              </div>}
+              { isAuthenticated() && <div className='log-info'>
+                <Link to='/bands'><h2 className='link-style'>Search for a band</h2></Link>
+                <h2>or</h2>
+                <Link to='/bands/'><h2 className='link-style'>Start one yourself</h2></Link>
+              </div>}
             </div>
           </div>
         </div>
@@ -31,4 +33,4 @@ class Info extends React.Component {
   }
 }
 
-export default Info
+export default withRouter(Info)

@@ -1,9 +1,10 @@
 /* eslint-disable camelcase */
 import React from 'react'
+import Select from 'react-select'
 
 const UserForm = props => {
-  const { username, email, password, password_confirmation, profile_image, instrument, skill_level } = props.formData
-  const { handleChange, handleSubmit } = props
+  const { username, email, password, password_confirmation, profile_image, skill_level } = props.formData
+  const { handleChange, handleSubmit, handleMultiSelectChange, options } = props
 
   return (
     <div className="columns">
@@ -57,33 +58,7 @@ const UserForm = props => {
         <div className="field">
           <label className="label">Instruments</label>
           <div className="control">
-            <select name='instrument' value={instrument} onChange={handleChange} multiple>
-              <option>Drum Kit</option>
-              <option>Lead Guitar</option>
-              <option>Rhythm Guitar</option>
-              <option>Bass Guitar</option>
-              <option>Acoustic Guitar</option>
-              <option>Vocals</option>
-              <option>Ukulele</option>
-              <option>Harp</option>
-              <option>Banjo</option>
-              <option>Accordion</option>
-              <option>Piano</option>
-              <option>Keyboard</option>
-              <option>Saxophone</option>
-              <option>Trumpet</option>
-              <option>Clarinet</option>
-              <option>Flute</option>
-              <option>Bagpipe</option>
-              <option>Trombone</option>
-              <option>Harmonica</option>
-              <option>Oboe</option>
-              <option>Cello</option>
-              <option>Violin</option>
-              <option>Double Bass</option>
-              <option>Synth</option>
-              <option>Drum Machine</option>
-            </select>
+            <Select options={options} isMulti onChange={handleMultiSelectChange} />
           </div>
         </div>
         <div className="field">
@@ -113,7 +88,7 @@ const UserForm = props => {
           </div>
         </div>
         <div className="field">
-          <button type="submit" className="button is-fullwidth is-warning">Submit</button>
+          <button type="submit" className="button is-fullwidth purple">Submit</button>
         </div>
       </form>
     </div>

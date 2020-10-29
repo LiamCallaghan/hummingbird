@@ -50,6 +50,10 @@ export const getUserProfile = () => {
   return axios.get(`${baseUrl}/auth/profile`, withHeaders())
 }
 
+export const getBasicUserProfile = () => {
+  return axios.get(`${baseUrl}/auth/profile/basic`, withHeaders())
+}
+
 export const updateUserProfile = formData => {
   return axios.put(`${baseUrl}/auth/profile/`, formData, withHeaders())
 }

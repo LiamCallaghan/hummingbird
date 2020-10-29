@@ -48,6 +48,14 @@ class LoginView(APIView):
             {'token': token, 'message': f'Welcome Back {user_to_login.username}'}
         )
 
+class BasicProfileView(APIView):
+    permission_classes = (IsAuthenticated, )
+
+    def get(self, request):
+        user = User.objects.get(pk=request.user.id)
+        serialized_user = UserSerializer(user)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)
+
 class ProfileView(APIView):
 
     permission_classes = (IsAuthenticated, )

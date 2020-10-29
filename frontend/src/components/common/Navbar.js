@@ -4,14 +4,6 @@ import { logout, isAuthenticated } from '../../lib/auth'
 
 class Navbar extends React.Component {
 
-  // state = {
-  //   user: null
-  // }
-
-  // componentDidMount = async () => {
-  //   const user
-  // }
-
   handleLogout = () => {
     logout()
   }
