@@ -80,6 +80,10 @@ a {
   display: none;
 }
 
+.style-hider {
+  color: $purple;
+}
+
 .style-hider:hover ~ .styles {
   display: block;
   color: grey;
