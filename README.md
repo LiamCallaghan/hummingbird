@@ -33,9 +33,11 @@ Planning for what kind of website I wanted to make didnt take long as I knew wha
 
 Day 2: Building out backend, user models, band models, django admin page data entered.
 
-I started with the part of the backend I had built multiple times before, the users and authentification. I had planned to have two types of users, people starting a band and people joining one, but in the end it made more sense to have people be able do both. I had the instrument and skill levels as enum fields at first but I decided that react-select would make that redundant. Using the django admin page to view and add data to my models helped me a lot with developing the forms I would use on the frontend site, its a really good way to view the data in databases made with it also.
+I started with the part of the backend I had built multiple times before, the users and authentification. I had planned to have two types of users, people starting a band and people joining one, but in the end it made more sense to have people be able do both. I had the instrument and skill levels as enum fields at first but I decided that react-select would make that redundant. Using the django admin page to view and add data to my models helped me a lot with developing the forms I would use on the frontend site, its a really good way to view the data in databases made with it also. The band model worked out to be pretty straight forward.
 
 Day 3: basic message and chat models, serializers.
+
+Figuring out the relationship between messages and the chat in which they are stored took a while, with a lot of reading and testing different ways. I ended up going with two one to many relationships, bands can have many chats and chats can have many messages.
 
 Day 4: Authentification, Start of front end, home page, navbar, register and login.
 
