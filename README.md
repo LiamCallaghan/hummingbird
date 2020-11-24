@@ -1,6 +1,6 @@
 # hummingbird
 
-A website to start or join a band, made with React and Django.
+A website to start or join a band, made with React and Django. Developed over 7 days.
 
 ## Deployed Link
 
