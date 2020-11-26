@@ -11,7 +11,7 @@ const withHeaders = () => {
 }
 
 export const getBandList = () => {
-  return axios.get(`${baseUrl}/bands`)
+  return axios.get(`${baseUrl}/bands/`)
 }
 
 export const getSingleBand = bandId => {

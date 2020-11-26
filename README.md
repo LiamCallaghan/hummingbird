@@ -37,15 +37,19 @@ I started with the part of the backend I had built multiple times before, the us
 
 Day 3: basic message and chat models, serializers.
 
-Figuring out the relationship between messages and the chat in which they are stored took a while, with a lot of reading and testing different ways. I ended up going with two one to many relationships, bands can have many chats and chats can have many messages.
+Figuring out the relationship between messages and the chat in which they are stored took a while, with a lot of reading and testing different ways. I ended up going with two one to many relationships, bands can have many chats and chats can have many messages. Adding in the serializers was a continuous process as I figured out which models needed to be populated from others. I accidentaly created a recursive model a few times, although there arent any in this final version. Genre and instrument are models that populate onto bands and users respectively. Creating the seed data for these was done again with the django admin page, converting the lists I had made into JSON manually would have been pointless.
 
 Day 4: Authentification, Start of front end, home page, navbar, register and login.
 
-this lead me to, in addition to
+Most of the authentification was going to work the same way it had in my other projects, although none of the other projects had django or python in the backend so a lot had to be tweaked. At this point I started working on the frontend, getting the basic site set up. The home page, navbar and register/login pages were borrowed from previous work as well with minimal styling for now. This lead me to add extra functionality in to the user model, default profile pictures and fields that could be left blank to name a few. This was so users could register easily, and then flesh out their profile later on.
 
 Day 5: profile page, band create page, band list page.
 
+Creating the main pages for the app took a bit more consideration as this was going to be where people spent most of their time interacting with the site. I started with the band search page as different cards with the bands info on them, but elongating them and forming a list made more sense for people trying to search through them. This looked messy with the genres added, especially with the bands where I added lots of genres, so I changed those to conditionaly show on hover. For the profile page, I added an edit profile button which leads to an altered registration form. The profile page also lists bands youve made and chats youve started with bands. The form to create bands was inspired by the form on the django admin app, this made it very easy to decide which inputs to use for what fields.
+
 Day 6: Conditional show stuff, hover and logged in.
+
+I changed the text on the home page to show different text depending on if the user was signed in or not, that works fine. I used the exact same idea on the bands and chat/message page, to try to show only the chats avaliable (to the owner of the band) or the singular chat the user is involved in/a button to start one (to everybody else). I couldnt figure out why this didnt work in the end, and I had to move on to finish the MVP.
 
 Day 7: Styling, bug testing and touch ups.
 
