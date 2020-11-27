@@ -53,11 +53,13 @@ I changed the text on the home page to show different text depending on if the u
 
 Day 7: Styling, bug testing and touch ups.
 
+For the colour theme I went with the simple combo of purple, black and white. I made the Hummingbird logo in paint 3D and used a royalty free band image for the homepage.
+
 ## Challenges and Extra Features
 
 Styling, populating the right serializers and the chat owner/ band owner function.
 
-Adding bands or albums that influenced you, error handling, delete/edit bands, filtering bands, location services (practice rooms near you, filter by location).
+Adding bands or albums that influenced you, error handling, delete/edit bands, filtering bands, location services (practice rooms near you, filter by location). Slideshow on the homepage with different types of stock bands.
 
 ## Wins and Key Learnings
 
