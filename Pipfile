@@ -11,6 +11,9 @@ psycopg2-binary = "*"
 pylint = "*"
 djangorestframework = "*"
 pyjwt = "*"
+python-dotenv = "*"
+dj-database-url = "*"
+django-on-heroku = "*"
 
 [requires]
 python_version = "3.8"
