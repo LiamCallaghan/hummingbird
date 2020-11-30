@@ -7,7 +7,8 @@ const BandItem = ({ id, description, genre, goals, name, size, owner }) => {
       <Link to={`/bands/${id}`}>
         <div className='card band-items'>
           <div className='card-header'>
-            <h3 className='card-header-title'>{name} - {'Wants to ' + goals} - {<span className='style-hider'>Hover to show genres</span>} - {genre.map(style => <span key={style.id} className='styles'>{style.name + '.'}</span>)}</h3>
+            <h3 className='card-header-title'>{name} - {'Wants to ' + goals} - {<span className='style-hider'>Hover to show genres</span>} 
+            - {genre.map(style => <span key={style.id} className='styles'>{style.name + '.'}</span>)}</h3>
           </div>
           <div className='card-content'>
             <p>{description.slice(0,30) + '...'} - {'Looking for ' + size + ' members'} - {'Created by: ' + owner.username}</p>

@@ -1,41 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# instrument_choices = (
-    # ('VOC', 'Vocals'),
-    # ('DMK', 'Drum Kit'),
-    # ('LEG', 'Lead Guitar'),
-    # ('RYG', 'Rhythm Guitar'),
-    # ('BSG', 'Bass Guitar'),
-    # ('ACG', 'Acoustic Guitar'),
-    # ('UKE', 'Ukulele'),
-    # ('HRP', 'Harp'),
-    # ('BNJ', 'Banjo'),
-    # ('ACC', 'Accordion'),
-    # ('PAN', 'Piano'),
-    # ('KYB', 'Keyboard'),
-    # ('SAX', 'Saxophone'),
-    # ('TRP', 'Trumpet'),
-    # ('CLR', 'Clarinet'),
-    # ('FLT', 'Flute'),
-    # ('BGP', 'Bagpipe'),
-    # ('TRM', 'Trombone'),
-    # ('HRM', 'Harmonica'),
-    # ('OBE', 'Oboe'),
-    # ('CEL', 'Cello'),
-    # ('VLN', 'Violin'),
-    # ('DBB', 'Double Bass'),
-    # ('SNT', 'Synth'),
-    # ('DRM', 'Drum Machine'),
-# )
-
 skill_choices = (
     ('Beginner', 'Beginner'),
     ('Intermediate', 'Intermediate'),
     ('Expert', 'Expert')
 )
 
-# Create your models here.
 class User(AbstractUser):
     email = models.CharField(max_length=50, unique=True)
     first_name = models.CharField(max_length=50, blank=True)

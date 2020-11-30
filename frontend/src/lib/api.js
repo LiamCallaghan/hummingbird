@@ -15,7 +15,7 @@ export const getBandList = () => {
 }
 
 export const getSingleBand = bandId => {
-  return axios.get(`${baseUrl}/bands/${bandId}`)
+  return axios.get(`${baseUrl}/bands/${bandId}/`)
 }
 
 export const createBand = bandFormData => {
@@ -23,11 +23,11 @@ export const createBand = bandFormData => {
 }
 
 export const updateBand = (bandId, bandFormData) => {
-  return axios.put(`${baseUrl}/bands/${bandId}`, bandFormData, withHeaders())
+  return axios.put(`${baseUrl}/bands/${bandId}/`, bandFormData, withHeaders())
 }
 
 export const deleteBand = bandId => {
-  return axios.delete(`${baseUrl}/bands/${bandId}`, withHeaders())
+  return axios.delete(`${baseUrl}/bands/${bandId}/`, withHeaders())
 }
 
 export const registerUser = formData => {
@@ -39,19 +39,19 @@ export const loginUser = formData => {
 }
 
 export const getAllProfiles = () => {
-  return axios.get(`${baseUrl}/auth/users`)
+  return axios.get(`${baseUrl}/auth/users/`)
 }
 
 export const getSingleProfile = profileId => {
-  return axios.get(`${baseUrl}/auth/users/${profileId}`)
+  return axios.get(`${baseUrl}/auth/users/${profileId}/`)
 }
 
 export const getUserProfile = () => {
-  return axios.get(`${baseUrl}/auth/profile`, withHeaders())
+  return axios.get(`${baseUrl}/auth/profile/`, withHeaders())
 }
 
 export const getBasicUserProfile = () => {
-  return axios.get(`${baseUrl}/auth/profile/basic`, withHeaders())
+  return axios.get(`${baseUrl}/auth/profile/basic/`, withHeaders())
 }
 
 export const updateUserProfile = formData => {
@@ -59,11 +59,11 @@ export const updateUserProfile = formData => {
 }
 
 export const getGenreList = () => {
-  return axios.get(`${baseUrl}/genres`)
+  return axios.get(`${baseUrl}/genres/`)
 }
 
 export const getInstrumentList = () => {
-  return axios.get(`${baseUrl}/instruments`)
+  return axios.get(`${baseUrl}/instruments/`)
 }
 
 export const startChat = (chatFormData) => {
@@ -75,13 +75,13 @@ export const createMessage = (messageFormData) => {
 }
 
 export const getChatList = () => {
-  return axios.get(`${baseUrl}/chat`, withHeaders())
+  return axios.get(`${baseUrl}/chat/`, withHeaders())
 }
 
 export const getMessageList = () => {
-  return axios.get(`${baseUrl}/messages`, withHeaders())
+  return axios.get(`${baseUrl}/messages/`, withHeaders())
 }
 
 export const getSingleChat = chatId => {
-  return axios.get(`${baseUrl}/chat/${chatId}`, withHeaders())
+  return axios.get(`${baseUrl}/chat/${chatId}/`, withHeaders())
 }

@@ -7,7 +7,6 @@ goal_choices = (
     ('Make friends', 'Make friends')
 )
 
-# Create your models here.
 class Band(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
